@@ -82,7 +82,7 @@ app.use(express.static(buildPath, {
 
 // 5. SPA FALLBACK
 // Catch-all handler for React Routing
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
   // Security: Don't serve index.html for missing static assets (prevent MIME confusion)
   if (req.path.match(/\.(js|css|png|jpg|jpeg|gif|ico|json|svg|map)$/)) {
     res.status(404).send("Not Found");
