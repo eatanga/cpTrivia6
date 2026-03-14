@@ -1,6 +1,9 @@
 
-const express = require("express");
-const path = require("path");
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Global Error Handlers - Prevent container exit on non-critical errors
 process.on('uncaughtException', (err) => {
